@@ -36,7 +36,7 @@ def wikiquotesRandom(event, context):
     while len(a)>260:
        a = wikiquotes.random_quote(author, lang)    
 
-    message = a+"\n"+author
+    message = a+"\n\n"+author
     
     api.update_status(status=message)
 

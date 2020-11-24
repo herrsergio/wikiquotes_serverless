@@ -21,7 +21,7 @@ Steps to install:
 
 `source env/bin/activate`
 
-`pip install tweepy requests
+`pip install tweepy requests wikiquotes`
 
 `pip freeze > requirements.txt`
 

@@ -4,11 +4,12 @@ import random
 
 def wikiquotesRandom(event, context):
 
-    consumer_key = "XXX"
-    consumer_secret = "XXX"
+    consumer_key = "pJJLmeF2NwUV5QsXa7PdMhcS1"
+    consumer_secret = "lE9HiSlJmjLVUgPdMYAdtzWtaKnRAHjRNJ8BoN2JwHWF9y7zmH"
 
-    access_token = "XXX"
-    access_token_secret = "XXX"
+    access_token = "5909582-Kjqb8bRs1u9TSnXpSm03mJJQmbIqKx0FidWlBHlrMN"
+    access_token_secret = "qOPQYFiVEsTzluosTVyywym8CKSsuHuCunNShKtBJWDTj"
+
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.secure = True
@@ -38,14 +39,12 @@ def wikiquotesRandom(event, context):
 
     author = random.choice(authors)
 
-    if (author == "Jorge Luis Borges") or (author == "Octavio Paz") or (author == "Benito Juárez")
-    or (author == "José Vasconcelos") or (author == "Emiliano Zapata") or (author == "Simón Bolívar")
-    or (author == "Diego Armando Maradona"):
+    if (author == "Jorge Luis Borges") or (author == "Octavio Paz") or (author == "Benito Juárez") or (author == "José Vasconcelos") or (author == "Emiliano Zapata") or (author == "Simón Bolívar") or (author == "Diego Armando Maradona"):
         lang = "spanish"
 
     a = wikiquotes.random_quote(author, lang)
 
-    while len(a)>280:
+    while len(a)>260:
        a = wikiquotes.random_quote(author, lang)    
 
     message = a+"\n\n"+author
